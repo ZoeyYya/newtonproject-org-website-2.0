@@ -6,7 +6,7 @@ import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 import { StaticImage } from 'gatsby-plugin-image'
 import { mdGithub } from '../utils/url'
-import {useActiveHash} from '../hooks/useActiveHash'
+import { useActiveHash } from '../hooks/useActiveHash'
 // import { Link } from 'gatsby-plugin-intl'
 import ExpandableCard from '../components/docs/expandableCard'
 import Header from '../components/header'
@@ -50,6 +50,24 @@ const DocsPage = ({ data: { allMdx, allFile } }: any) => {
   function openModal() {
     setIsOpen(true)
   }
+
+  // const getTitleIds = (items:any, depth:any) => {
+  //   if (depth > (maxDepth ? maxDepth : 1)) return
+
+  //   items?.forEach((item) => {
+  //     if (item.items && Array.isArray(item.items)) {
+  //       if (item.title) titleIds.push(getCustomId(item.title))
+  //       getTitleIds(item.items, depth + 1)
+  //     } else {
+  //       titleIds.push(getCustomId(item.title))
+  //     }
+  //   })
+  // }
+
+  // getTitleIds(items, 0)
+
+  // const activeHash = useActiveHash(titleIds)
+  // console.log('====', activeHash)
 
   return (
     <>
